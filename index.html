@@ -4,6 +4,7 @@
         <title>Block Jumper</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src='http://cdnjs.cloudflare.com/ajax/libs/phaser/2.0.2/phaser.min.js'></script>
+		<script src='levels.js'></script>
     </head>
 	<style>
 	body{
@@ -19,57 +20,6 @@
 		  var min = 175;
 		  return Math.random() * (max - min) + min;
 		}
-		var level = 1;
-		function levels(level){
-			boxes = game.add.group();
-			boxes.enableBody = true;
-			var blocks = boxes.create(0, game.world.height - 0, 'block2');
-			if(level == 1){
-				blocks = boxes.create(400, game.world.height - 125, 'block2');
-				blocks = boxes.create(400, game.world.height - 150, 'block2');
-				blocks = boxes.create(625, game.world.height - 125, 'block2');
-				blocks = boxes.create(650, game.world.height - 150, 'block2');
-				blocks = boxes.create(650, game.world.height - 125, 'block2');
-			}
-			if(level == 2){
-				blocks.kill();
-				blocks = boxes.create(400, game.world.height - 125, 'block2');
-				blocks = boxes.create(425, game.world.height - 150, 'block2');
-				blocks = boxes.create(425, game.world.height - 125, 'block2');
-				blocks = boxes.create(450, game.world.height - 125, 'block2');
-				blocks = boxes.create(625, game.world.height - 125, 'block2');
-			}
-			if(level == 3){
-				blocks.kill();
-				player.body.velocity.x=200;	
-				blocks = boxes.create(400, game.world.height - 150, 'block2');
-				blocks = boxes.create(425, game.world.height - 150, 'block2');
-				blocks = boxes.create(450, game.world.height - 150, 'block2');
-				blocks = boxes.create(600, game.world.height - 125, 'block2');
-				blocks = boxes.create(600, game.world.height - 150, 'block2');
-			}
-			if(level == 4){
-				blocks.kill();
-				player.body.velocity.x=200;	
-				blocks.body.immovable = true;
-				blocks = boxes.create(200, game.world.height - 125, 'block2');
-				blocks = boxes.create(225, game.world.height - 125, 'block2');
-				blocks = boxes.create(325, game.world.height - 125, 'block2');
-				blocks = boxes.create(325, game.world.height - 150, 'block2');
-				blocks = boxes.create(450, game.world.height - 150, 'block2');
-				blocks = boxes.create(475, game.world.height - 150, 'block2');
-				blocks = boxes.create(450, game.world.height - 200, 'block2');
-				blocks = boxes.create(475, game.world.height - 200, 'block2');
-				blocks = boxes.create(600, game.world.height - 125, 'block2');
-				blocks = boxes.create(625, game.world.height - 150, 'block2');	
-				blocks = boxes.create(625, game.world.height - 125, 'block2');
-				blocks = boxes.create(650, game.world.height - 150, 'block2');
-				blocks = boxes.create(650, game.world.height - 175, 'block2');
-				blocks.body.immovable = true;				
-			}
-			
-			
-		}
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 		
 		function preload(){
@@ -77,6 +27,9 @@
 			game.load.image('line', 'line.png');
 			game.load.image('block2', 'block2.png');
 			game.load.image('end', 'end.png');
+			game.load.audio('jump', 'jump.wav');
+			game.load.audio('lose', 'lose.wav');
+			game.load.audio('win', 'win.wav');
 		}
 		
 		var score = 0;
@@ -87,6 +40,7 @@
 			game.stage.backgroundColor = '#2ecc71';
 			
 			group = game.add.group();
+			
 			group.enableBody = true;
 			
 			var ground = group.create(0, game.world.height - 100, 'line');
@@ -102,7 +56,6 @@
 			player.body.collideWorldBounds = true;
 			
 			player.animations.add('left', [0, 1, 2, 3], 10, true);
-			player.animations.add('right', [5, 6, 7, 8], 10, true);
 
 			cursors = game.input.keyboard.createCursorKeys();
 			jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);			
@@ -123,16 +76,23 @@
 			game.physics.arcade.collide(player, end, levelEnd, null, this);
 			player.body.velocity.x= 200 + level*5;		
 			if ((jump.isDown || game.input.pointer1.isDown) && player.body.touching.down){
+				jumpAudio = game.add.audio('jump');
+				jumpAudio.play();
 				player.body.velocity.y = -250;
 				player.body.bounce.y = 0.0;
 				player.body.gravity.y = 350;
 			}
 		}
 		function collisionHandler(obj1, obj2) {
+			loseAudio = game.add.audio('lose');
+			loseAudio.play();
 			game.state.start(game.state.current);
+			
 		}
 		
 		function levelEnd(){
+			winAudio = game.add.audio('win');
+			winAudio.play();
 			level++;
 			levels(level);
 			game.state.start(game.state.current);
