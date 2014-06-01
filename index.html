@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Block Jumper</title>
+        <title>Blockenstein</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src='http://cdnjs.cloudflare.com/ajax/libs/phaser/2.0.2/phaser.min.js'></script>
 		<script src='levels.js'></script>
     </head>
 	<style>
 	body{
-		background-color: #2ecc71;
+		background-color: #3498db;
 		font-family: arial;
 		color: #ecf0f1;
 		font-size: 32px;
@@ -38,16 +38,15 @@
 	
 		function create() {
 		
-			game.physics.startSystem(Phaser.Physics.ARCADE);
-			game.stage.backgroundColor = '#2ecc71';
-			
+			game.physics.startSystem(Phaser.Physics.ARCADE);			
 			group = game.add.group();
-			
+			game.stage.backgroundColor = '#3498db';
 			group.enableBody = true;
 			
 			var ground = group.create(0, game.world.height - 100, 'line');
 			ground.scale.setTo(2, 2);
 			ground.body.immovable = true;
+			
 			
 			player = game.add.sprite(0, game.world.height - 125, 'block');
 
@@ -76,7 +75,8 @@
 			game.physics.arcade.collide(player, group);
 			game.physics.arcade.collide(player, boxes, collisionHandler, null, this);
 			game.physics.arcade.collide(player, end, levelEnd, null, this);
-			player.body.velocity.x= 200 + level*5;		
+			player.body.velocity.x= 250;
+				
 			if ((jump.isDown || game.input.pointer1.isDown) && player.body.touching.down){
 				jumpAudio = game.add.audio('jump');
 				jumpAudio.play();
