@@ -41,7 +41,7 @@
 		function create() {
 		
 			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-			this.scale.minWidth = 400;
+			this.scale.minWidth = 320;
 			this.scale.minHeight = 480;
 			this.scale.maxWidth = 800;
 			this.scale.maxHeight = 600;
@@ -52,7 +52,7 @@
 			group.enableBody = true;
 			
 			var ground = group.create(0, game.world.height - 100, 'line');
-			ground.scale.setTo(2, 2);
+			ground.scale.setTo(2, 2); 
 			ground.body.immovable = true;
 				
 			player = game.add.sprite(0, game.world.height - 125, 'block');
