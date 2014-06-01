@@ -52,9 +52,9 @@
 			group.enableBody = true;
 			
 			var ground = group.create(0, game.world.height - 100, 'line');
+			ground.scale.setTo(2, 2);
 			ground.body.immovable = true;
-			
-			
+				
 			player = game.add.sprite(0, game.world.height - 125, 'block');
 
 			game.physics.arcade.enable(player);
@@ -73,7 +73,6 @@
 			end = game.add.group();
 			end.enableBody = true;
 			var endingBlock = end.create(775, game.world.height - 150, 'end');
-			endingBlock.scale.setTo(2, 2);
 			endingBlock.body.immovable = true;
 			
 			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
