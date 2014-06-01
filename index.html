@@ -40,6 +40,12 @@
 	
 		function create() {
 		
+			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+			this.scale.minWidth = 320;
+			this.scale.minHeight = 480;
+			this.scale.maxWidth = 800;
+			this.scale.maxHeight = 1152;
+		
 			game.physics.startSystem(Phaser.Physics.ARCADE);			
 			group = game.add.group();
 			game.stage.backgroundColor = '#3498db';
@@ -71,12 +77,6 @@
 			endingBlock.body.immovable = true;
 			
 			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
-			
-			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-			this.scale.minWidth = 320;
-			this.scale.minHeight = 480;
-			this.scale.maxWidth = 768;
-			this.scale.maxHeight = 1152;
 
 
 		}
