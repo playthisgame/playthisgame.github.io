@@ -19,7 +19,7 @@
 	}
 	</style>
 	<script>
-		var game = new Phaser.Game(, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
+		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 
 		
 		function preload(){
@@ -34,7 +34,7 @@
 		}
 	
 		function create() {
-		
+			game.scale.startFullScreen();
 			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 			this.scale.minWidth = 320;
 			this.scale.minHeight = 480;
