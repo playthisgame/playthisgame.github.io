@@ -28,6 +28,7 @@
 		  return Math.random() * (max - min) + min;
 		}
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
+
 		
 		function preload(){
 			game.load.image('block', '/assets/images/block.png');
@@ -73,6 +74,13 @@
 			endingBlock.body.immovable = true;
 			
 			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
+			
+			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+			this.scale.minWidth = 320;
+			this.scale.minHeight = 480;
+			this.scale.maxWidth = 768;
+			this.scale.maxHeight = 1152;
+
 
 		}
 		function update() {
