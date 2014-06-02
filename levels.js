@@ -3,6 +3,7 @@ function levels(level){
 	boxes = game.add.group();
 	boxes.enableBody = true;
 	var blocks = boxes.create(0, game.world.height - 0, 'block2');
+	blocks.scale.setTo(2, 2);
 	var lava = boxes.create(0, game.world.height - 0, 'lava');
 	if(level == 1){
 		game.add.text(300, 200, "Blockenstein", { fontSize: '32px', fill: '#FFFFFF' });
