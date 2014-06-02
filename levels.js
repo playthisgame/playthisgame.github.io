@@ -5,7 +5,7 @@ function levels(level){
 	var blocks = boxes.create(0, game.world.height - 0, 'block2');
 	var lava = boxes.create(0, game.world.height - 0, 'lava');
 	if(level == 1){
-		game.add.text(300, 200, "<p>Blockenstein</p>", { });
+		game.add.text(300, 200, "Blockenstein", { fill: '#FFFFFF' });
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
 		blocks = boxes.create(400, game.world.height - 150, 'block2');
 		blocks = boxes.create(625, game.world.height - 125, 'block2');
