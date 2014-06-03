@@ -4,6 +4,7 @@ function levels(level){
 	boxes.enableBody = true;
 	var blocks = boxes.create(0, game.world.height - 0, 'block2');
 	var lava = boxes.create(0, game.world.height - 0, 'lava');
+	var lazer = boxes.create(0, game.world.height - 0, 'lazer');
 	if(level == 1){
 		game.add.text(300, 200, "Blockenstein", { fill: '#FFFFFF' });
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
@@ -236,9 +237,18 @@ function levels(level){
 		lava = boxes.create(412.5, game.world.height - 275, 'lava');
 		lava = boxes.create(475, game.world.height - 250, 'lava');
 	}
-	if(level > 21){
+	if(level === 22){
 		blocks.kill();
-		//blocks = boxes.create(200, game.world.height - 125, 'block2');			
+		blocks = boxes.create(400, game.world.height - 125, 'block2');
+		blocks = boxes.create(400, game.world.height - 150, 'block2');
+		lazer = boxes.create(425, game.world.height - 150, 'lazer');
+		lazer = boxes.create(425, game.world.height - 150, 'lazer');
+		blocks = boxes.create(450, game.world.height - 125, 'block2');
+		blocks = boxes.create(450, game.world.height - 150, 'block2');
+		
+	}
+	if(level > 22){
+		blocks.kill();	
 	}		
 			
 }
