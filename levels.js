@@ -3,8 +3,11 @@ function levels(level){
 	boxes = game.add.group();
 	boxes.enableBody = true;
 	var blocks = boxes.create(0, game.world.height - 0, 'block2');
+	blocks.body.immovable = true;
 	var lava = boxes.create(0, game.world.height - 0, 'lava');
+	lava.body.immovable = true;
 	var lazer = boxes.create(0, game.world.height - 0, 'lazer');
+	lazer.body.immovable = true;
 	if(level == 1){
 		game.add.text(300, 200, "Blockenstein", { fill: '#FFFFFF' });
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
