@@ -242,12 +242,12 @@ function levels(level){
 	if(level === 22){
 		game.add.text(300, 200, "Don't touch the laser!", { fontSize: '32px', fill: '#c0392b' });
 		blocks.kill();
-		blocks = boxes.create(100, game.world.height - 150, 'block2');
-		lazer = boxes.create(125, game.world.height - 150, 'lazer');
-		lazer = boxes.create(150, game.world.height - 150, 'lazer');
-		lazer = boxes.create(175, game.world.height - 150, 'lazer');
-		lazer = boxes.create(200, game.world.height - 150, 'lazer');
-		blocks = boxes.create(225, game.world.height - 150, 'block2');
+		blocks = boxes.create(100, game.world.height - 151, 'block2');
+		lazer = boxes.create(125, game.world.height - 151, 'lazer');
+		lazer = boxes.create(150, game.world.height - 151, 'lazer');
+		lazer = boxes.create(175, game.world.height - 151, 'lazer');
+		lazer = boxes.create(200, game.world.height - 151, 'lazer');
+		blocks = boxes.create(225, game.world.height - 151, 'block2');
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
 		blocks = boxes.create(400, game.world.height - 150, 'block2');
 		lazer = boxes.create(425, game.world.height - 150, 'lazer');
