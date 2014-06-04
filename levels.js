@@ -308,7 +308,7 @@ function levels(level){
 		blocks = boxes.create(350, game.world.height - 150, 'block2');
 		blocks = boxes.create(350, game.world.height - 175, 'block2');
 	}
-	if(level > 24){
+	if(level > 25){
 		blocks.kill();	
 	}		
 			
