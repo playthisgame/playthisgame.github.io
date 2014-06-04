@@ -295,6 +295,15 @@ function levels(level){
 		lazer = boxes.create(675, game.world.height - 150, 'lazer');
 		blocks = boxes.create(675, game.world.height - 125, 'block2');
 	}
+	if(level === 25){
+		blocks.kill();
+		blocks = boxes.create(200, game.world.height - 125, 'block2');
+		blocks = boxes.create(200, game.world.height - 150, 'block2');
+		blocks = boxes.create(200, game.world.height - 175, 'block2');
+		blocks = boxes.create(350, game.world.height - 125, 'block2');
+		blocks = boxes.create(350, game.world.height - 150, 'block2');
+		blocks = boxes.create(350, game.world.height - 175, 'block2');
+	}
 	if(level > 24){
 		blocks.kill();	
 	}		
