@@ -267,7 +267,6 @@ function levels(level){
 		lazer = boxes.create(250, game.world.height - 150, 'lazer');
 		lazer = boxes.create(275, game.world.height - 150, 'lazer');
 		lazer = boxes.create(300, game.world.height - 150, 'lazer');
-		blocks = boxes.create(225, game.world.height - 125, 'block2');
 		blocks = boxes.create(325, game.world.height - 125, 'block2');
 		blocks = boxes.create(325, game.world.height - 150, 'block2');
 		blocks = boxes.create(450, game.world.height - 150, 'block2');
