@@ -17,3 +17,11 @@ In Progress
 <ul>Crates</ul>
 <ul>Fullscreen</ul>
 <ul>Next-gen Graphics</ul>
+</ul>Mobile web optimization</ul>
+
+Current Bugs
+======================
+
+<ul>Larger font sizes currently not available</ul>
+<ul>Resizing issues on iPhone</ul>
+<ul>Low fps on lower-tier devices</ul>
