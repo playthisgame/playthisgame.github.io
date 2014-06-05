@@ -280,19 +280,19 @@ function levels(level){
 	if(level === 24){
 		blocks.kill();
 		blocks = boxes.create(200, game.world.height - 125, 'block2');
-		lazer = boxes.create(200, game.world.height - 150, 'lazer');
-		lazer = boxes.create(225, game.world.height - 150, 'lazer');
-		lazer = boxes.create(250, game.world.height - 150, 'lazer');
-		lazer = boxes.create(275, game.world.height - 150, 'lazer');
-		lazer = boxes.create(300, game.world.height - 150, 'lazer');
+		lazer = boxes.create(200, game.world.height - 137.5, 'lazer');
+		lazer = boxes.create(225, game.world.height - 137.5, 'lazer');
+		lazer = boxes.create(250, game.world.height - 137.5, 'lazer');
+		lazer = boxes.create(275, game.world.height - 137.5, 'lazer');
+		lazer = boxes.create(300, game.world.height - 137.5, 'lazer');
 		blocks = boxes.create(300, game.world.height - 125, 'block2');
 		blocks = boxes.create(550, game.world.height - 125, 'block2');
 		blocks = boxes.create(575, game.world.height - 125, 'block2');
 		blocks = boxes.create(575, game.world.height - 150, 'block2');
-		lazer = boxes.create(600, game.world.height - 150, 'lazer');
-		lazer = boxes.create(625, game.world.height - 150, 'lazer');
-		lazer = boxes.create(650, game.world.height - 150, 'lazer');
-		lazer = boxes.create(675, game.world.height - 150, 'lazer');
+		lazer = boxes.create(600, game.world.height - 137.5, 'lazer');
+		lazer = boxes.create(625, game.world.height - 137.5, 'lazer');
+		lazer = boxes.create(650, game.world.height - 137.5, 'lazer');
+		lazer = boxes.create(675, game.world.height - 137.5, 'lazer');
 		blocks = boxes.create(675, game.world.height - 125, 'block2');
 	}
 	if(level === 25){
