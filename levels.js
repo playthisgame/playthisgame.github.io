@@ -318,6 +318,5 @@ function levels(level){
 		}
 	if(level > 25){
 		blocks.kill();	
-	}		
-			
+	}					
 }
