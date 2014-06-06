@@ -57,9 +57,9 @@
 			end.enableBody = true;
 			var endingBlock = end.create(725, game.world.height - 150, 'end');
 			endingBlock.body.immovable = true;
-			
-			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
 			saveHighScore();
+			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
+			highScoreText = game.add.text(16, 16, highScore, { fontSize: '32px', fill: '#ecf0f1' });
 
 		}
 		function update() {
@@ -95,6 +95,7 @@
 			if(store.get('highScore')){
 				if(level > store.get('highScore')){
 					store.set('highScore', level);
+					var highScore = store.get('highscore');
 				}
 			}
 			else
