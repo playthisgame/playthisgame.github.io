@@ -58,8 +58,8 @@
 			var endingBlock = end.create(725, game.world.height - 150, 'end');
 			endingBlock.body.immovable = true;
 			saveHighScore();
-			game.add.text(375, 250, "level " + level, { fontSize: '32px', fill: '#ecf0f1' });
-			game.add.text(375, 290, "Best " + store.get('highScore'), { fontSize: '32px', fill: '#ecf0f1' });
+			scoreText = game.add.text(375, 250, "level " + level, { fontSize: '32px', fill: '#ecf0f1' });
+			highScoreText = game.add.text(375, 290, "Best " + store.get('highScore'), { fontSize: '32px', fill: '#ecf0f1' });
 
 		}
 		function update() {
