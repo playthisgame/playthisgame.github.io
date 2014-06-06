@@ -91,6 +91,13 @@
 			game.state.start(game.state.current);
 		}
 		
+		function saveHighScore(){
+			if(store.get('highScore')){
+				
+			}
+			else
+				var score = store.set('highScore', level);
+		}
 		function pause(){
 			game.paused = true;
 		}
