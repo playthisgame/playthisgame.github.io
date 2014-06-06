@@ -93,10 +93,12 @@
 		
 		function saveHighScore(){
 			if(store.get('highScore')){
-				
+				if(level > store.get('highScore')){
+					store.set('highScore', level);
+				}
 			}
 			else
-				var score = store.set('highScore', level);
+				store.set('highScore', level);
 		}
 		function pause(){
 			game.paused = true;
