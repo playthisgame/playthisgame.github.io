@@ -59,7 +59,7 @@
 			endingBlock.body.immovable = true;
 			saveHighScore();
 			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
-			highScoreText = game.add.text(16, 32, highScore, { fontSize: '32px', fill: '#ecf0f1' });
+			highScoreText = game.add.text(16, 32, store.get('highscore'), { fontSize: '32px', fill: '#ecf0f1' });
 
 		}
 		function update() {
