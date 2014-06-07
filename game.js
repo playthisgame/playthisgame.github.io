@@ -14,16 +14,15 @@
 		}
 	
 		function create() {
-
 			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 			this.scale.minWidth = 320;
 			this.scale.minHeight = 480;
 			if(screen.width <= 540){
-			this.scale.maxWidth = 320;
-			this.scale.maxHeight = 480;			
+				this.scale.maxWidth = 320;
+				this.scale.maxHeight = 480;			
 			}else{
-			this.scale.maxWidth = 768;
-			this.scale.maxHeight = 1152;
+				this.scale.maxWidth = 768;
+				this.scale.maxHeight = 1152;
 			}
 			this.scale.pageAlignVertically = true;
 			this.scale.pageAlignHorizontally = true;
