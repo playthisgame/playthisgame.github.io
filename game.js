@@ -76,6 +76,7 @@
 		function collisionHandler(obj1, obj2) {
 			lives = lives - 1;
 			if(lives === 0){
+				level = 1;
 				game.state.start(game.state.current);
 			}
 			loseAudio = game.add.audio('lose');
