@@ -97,6 +97,12 @@
 		}
 		
 		function saveHighScore(){
+		init()
+			function init() {
+				if (!store.enabled) {
+					alert('High Scores Not Available')
+				return
+			}
 			if(store.get('highScore')){
 				if(level > store.get('highScore')){
 					store.set('highScore', level);
