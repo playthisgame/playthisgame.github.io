@@ -1,5 +1,5 @@
 		var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
-
+		var lives = 3;
 		function preload(){
 			game.load.image('block', '/assets/images/block.png');
 			game.load.image('line', '/assets/images/line.png');
@@ -56,7 +56,6 @@
 			endingBlock.body.immovable = true;
 			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
 			saveHighScore();
-			var lives = 3;
 			//highScoreText = game.add.text(375, 290, "Best " + store.get('highScore'), { fontSize: '32px', fill: '#ecf0f1' });
 
 		}
