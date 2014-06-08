@@ -112,6 +112,7 @@
 				store.set('highScore', level);
 			var highScore = store.get('highScore');
 		}
+		}
 		function pause(){
 			game.paused = true;
 		}
