@@ -339,11 +339,11 @@ function levels(level){
 		lava = boxes.create(375, game.world.height - 150, 'lava');
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
 		blocks = boxes.create(400, game.world.height - 150, 'block2');
-		lazer = boxes.create(300, game.world.height - 227, 'lazer');
-		lazer = boxes.create(325, game.world.height - 227, 'lazer');
-		lazer = boxes.create(350, game.world.height - 227, 'lazer');
-		lazer = boxes.create(375, game.world.height - 227, 'lazer');
-		lazer = boxes.create(400, game.world.height - 227, 'lazer');
+		lazer = boxes.create(300, game.world.height - 226, 'lazer');
+		lazer = boxes.create(325, game.world.height - 226, 'lazer');
+		lazer = boxes.create(350, game.world.height - 226, 'lazer');
+		lazer = boxes.create(375, game.world.height - 226, 'lazer');
+		lazer = boxes.create(400, game.world.height - 226, 'lazer');
 		blocks = boxes.create(550, game.world.height - 125, 'block2');
 		lazer = boxes.create(575, game.world.height - 125, 'lazer');
 		lazer = boxes.create(600, game.world.height - 125, 'lazer');
