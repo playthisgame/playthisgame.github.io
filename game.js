@@ -75,7 +75,7 @@
 			}
 		}
 		function collisionHandler(obj1, obj2) {
-			lives--;
+			lives--
 			if(lives === 0){
 				game.state.start(game.state.current);
 			}
