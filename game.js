@@ -56,7 +56,7 @@
 			endingBlock.body.immovable = true;
 			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
 			saveHighScore();
-			livesText = game.add.text(600, 16, "Lives" + lives, { fontSize: '32px', fill: '#ecf0f1' });
+			livesText = game.add.text(600, 16, "Lives " + lives, { fontSize: '32px', fill: '#ecf0f1' });
 			highScoreText = game.add.text(600, 48, "Best " + store.get('highScore'), { fontSize: '32px', fill: '#ecf0f1' });
 
 		}
