@@ -17,7 +17,7 @@ In Progress
 <ul>Crates</ul>
 <ul>Fullscreen</ul>
 <ul>Next-gen Graphics</ul>
-</ul>Mobile web optimization</ul>
+<ul>Mobile web optimization</ul>
 
 Current Bugs
 ======================
