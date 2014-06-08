@@ -50,13 +50,13 @@
 			jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);			
 			
 			levels(level);
-			lives = 3;
 			end = game.add.group();
 			end.enableBody = true;
 			var endingBlock = end.create(725, game.world.height - 150, 'end');
 			endingBlock.body.immovable = true;
 			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
 			saveHighScore();
+			lives = 3;
 			//highScoreText = game.add.text(375, 290, "Best " + store.get('highScore'), { fontSize: '32px', fill: '#ecf0f1' });
 
 		}
