@@ -56,7 +56,7 @@
 			endingBlock.body.immovable = true;
 			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
 			saveHighScore();
-			lives = 3;
+			var lives = 3;
 			//highScoreText = game.add.text(375, 290, "Best " + store.get('highScore'), { fontSize: '32px', fill: '#ecf0f1' });
 
 		}
@@ -75,7 +75,7 @@
 			}
 		}
 		function collisionHandler(obj1, obj2) {
-			lives--
+			lives--;
 			if(lives === 0){
 				game.state.start(game.state.current);
 			}
