@@ -1,5 +1,6 @@
 		var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 		var lives = 3;
+		var highScore = store.get('highScore');
 		function preload(){
 			game.load.image('block', '/assets/images/block.png');
 			game.load.image('line', '/assets/images/line.png');
@@ -99,7 +100,6 @@
 			if(store.get('highScore')){
 				if(level > store.get('highScore')){
 					store.set('highScore', level);
-					var highScore = store.get('highScore');
 				}
 			}
 			else
