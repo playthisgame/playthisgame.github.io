@@ -50,7 +50,7 @@
 			jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);			
 			
 			levels(level);
-
+			lives = 3;
 			end = game.add.group();
 			end.enableBody = true;
 			var endingBlock = end.create(725, game.world.height - 150, 'end');
@@ -75,6 +75,10 @@
 			}
 		}
 		function collisionHandler(obj1, obj2) {
+			lives = lives -1;
+			if(lives === 0){
+				game.state.start(game.state.current);
+			}
 			loseAudio = game.add.audio('lose');
 			loseAudio.play();
 			game.state.start(game.state.current);
