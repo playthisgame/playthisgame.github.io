@@ -57,7 +57,8 @@
 			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
 			livesText = game.add.text(16, 48, 'Lives ' + lives, { fontSize: '32px', fill: '#ecf0f1' });
 			saveHighScore();
-			highScoreText = game.add.text(16, 80, 'Best ' + store.get("highScore"), { fontSize: '32px', fill: '#ecf0f1' });
+			var highScore = store.get("highScore");
+			highScoreText = game.add.text(16, 80, 'Best ' + highScore, { fontSize: '32px', fill: '#ecf0f1' });
 
 		}
 		function update() {
