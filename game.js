@@ -99,11 +99,11 @@
 			if(store.get('highScore')){
 				if(level > store.get('highScore')){
 					store.set('highScore', level);
-					var highScore = store.get('highScore');
 				}
 			}
 			else
 				store.set('highScore', level);
+			var highScore = store.get('highScore');
 		}
 		function pause(){
 			game.paused = true;
