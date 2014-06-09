@@ -91,6 +91,7 @@
 		function levelEnd(){
 			winAudio = game.add.audio('win');
 			winAudio.play();
+			lives++;
 			level++;
 			levels(level);
 			game.state.start(game.state.current);
