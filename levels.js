@@ -372,6 +372,7 @@ function levels(level){
 		blocks = boxes.create(625, game.world.height - 125, 'block2');
 		blocks = boxes.create(625, game.world.height - 150, 'block2');
 		blocks = boxes.create(650, game.world.height - 125, 'block2');
+		lava = boxes.create(650, game.world.height - 175, 'lava');
 		lava = boxes.create(650, game.world.height - 150, 'lava');
 		lava = boxes.create(675, game.world.height - 125, 'lava');
 		lava = boxes.create(675, game.world.height - 150, 'lava');
