@@ -170,7 +170,7 @@ function levels(level){
 	}
 	if(level === 17){
 		blocks.kill();
-		game.add.text(game.world.centerX, 200, "Beware of the lava!", { fontSize: '32px', fill: '#c0392b' align 'center' });
+		game.add.text(game.world.centerX, 200, "Beware of the lava!", { fontSize: '32px', fill: '#c0392b', align 'center' });
 		blocks = boxes.create(275, game.world.height - 125, 'block2');
 		blocks = boxes.create(275, game.world.height - 150, 'block2');
 		lava = boxes.create(300, game.world.height - 125, 'lava');
