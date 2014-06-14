@@ -84,7 +84,7 @@
 				if(game.input.mouse.button==0){
 					game.state.start(game.state.current);
 				}
-			}else
+			}else{
 			loseAudio = game.add.audio('lose');
 			loseAudio.play();
 			game.state.start(game.state.current);
