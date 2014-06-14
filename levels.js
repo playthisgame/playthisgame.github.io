@@ -9,8 +9,7 @@ function levels(level){
 	var lazer = boxes.create(0, game.world.height - 0, 'lazer');
 	lazer.body.immovable = true;
 	if(level == 1){
-		titleText = "Blockenstein"
-		titleText.updateText();
+		titleText = "Blockenstein";
 		game.add.text(game.world.centerX - titleText.textWidth, 200, "Blockenstein", { fill: '#FFFFFF', align: 'center' });
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
 		blocks = boxes.create(400, game.world.height - 150, 'block2');
