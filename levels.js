@@ -239,7 +239,7 @@ function levels(level){
 		lava = boxes.create(475, game.world.height - 250, 'lava');
 	}
 	if(level === 22){
-		game.add.text(187, 200, "Don't touch the laser!", { fill: '#c0392b', font:'64px Arial' align: 'center'});
+		game.add.text(, 200, "Don't touch the laser!", { fill: '#c0392b', font:'64px Arial' align: 'center' margin: '2px'});
 		blocks.kill();
 		blocks = boxes.create(100, game.world.height - 151, 'block2');
 		lazer = boxes.create(125, game.world.height - 151, 'lazer');
