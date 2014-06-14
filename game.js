@@ -44,7 +44,7 @@
 			player.body.gravity.y = 250;
 			player.body.collideWorldBounds = true;
 			
-			player.animations.add('left', [0, 1, 2, 3], 10, true);
+			//player.animations.add('left', [0, 1, 2, 3], 10, true);
 
 			cursors = game.input.keyboard.createCursorKeys();
 			jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);			
