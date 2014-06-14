@@ -80,7 +80,10 @@
 			if(lives === 0){
 				level = 1;
 				lives = 3;
-				game.state.start(game.state.current);
+				game.add.text(game.world.centerX, 80, "You have ran out of lives!", { fontSize: '32px', fill: '#ecf0f1' });
+				if(game.input.mouse.button==0){
+					game.state.start(game.state.current);
+				}
 			}
 			loseAudio = game.add.audio('lose');
 			loseAudio.play();
