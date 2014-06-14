@@ -9,7 +9,7 @@ function levels(level){
 	var lazer = boxes.create(0, game.world.height - 0, 'lazer');
 	lazer.body.immovable = true;
 	if(level == 1){
-		game.add.text(game.world.centerX, 200, "Blockenstein", { fill: '#FFFFFF'});
+		game.add.text(game.world.centerX, 200, "Blockenstein", { fill: '#FFFFFF'  align: 'center' });
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
 		blocks = boxes.create(400, game.world.height - 150, 'block2');
 		blocks = boxes.create(625, game.world.height - 125, 'block2');
@@ -170,7 +170,7 @@ function levels(level){
 	}
 	if(level === 17){
 		blocks.kill();
-		game.add.text(300, 200, "Beware of the lava!", { fontSize: '32px', fill: '#c0392b' });
+		game.add.text(game.world.centerX, 200, "Beware of the lava!", { fontSize: '32px', fill: '#c0392b' });
 		blocks = boxes.create(275, game.world.height - 125, 'block2');
 		blocks = boxes.create(275, game.world.height - 150, 'block2');
 		lava = boxes.create(300, game.world.height - 125, 'lava');
