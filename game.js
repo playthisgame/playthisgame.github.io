@@ -65,8 +65,8 @@
 			game.physics.arcade.collide(player, group);
 			game.physics.arcade.collide(player, boxes, collisionHandler, null, this);
 			game.physics.arcade.collide(player, end, levelEnd, null, this);
-			if(game.input.mouse.button==0){
-			player.body.velocity.x= 250;	
+			player.body.velocity.x= 250;
+				
 			if ((jump.isDown || game.input.pointer1.isDown || game.input.mouse.button==0) && player.body.touching.down){
 				jumpAudio = game.add.audio('jump');
 				jumpAudio.play();
@@ -74,7 +74,6 @@
 				player.body.bounce.y = 0.0;
 				player.body.gravity.y = 350;
 			}
-		}
 		}
 		function collisionHandler(obj1, obj2) {
 			lives = lives - 1;
