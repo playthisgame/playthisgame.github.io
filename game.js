@@ -65,8 +65,9 @@
 			game.physics.arcade.collide(player, group);
 			game.physics.arcade.collide(player, boxes, collisionHandler, null, this);
 			game.physics.arcade.collide(player, end, levelEnd, null, this);
+			if(game.input.mouse.button==0){
 			player.body.velocity.x= 250;
-				
+			}	
 			if ((jump.isDown || game.input.pointer1.isDown || game.input.mouse.button==0) && player.body.touching.down){
 				jumpAudio = game.add.audio('jump');
 				jumpAudio.play();
