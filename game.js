@@ -80,7 +80,6 @@
 			if(lives === 0){
 				level = 1;
 				lives = 3;
-				game.state.start(game.state.current);
 			}
 			loseAudio = game.add.audio('lose');
 			loseAudio.play();
