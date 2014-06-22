@@ -108,6 +108,6 @@
 		}
 		}
 		function pause(){
-			this.input.disabled = true;
+			game.input.disabled = true;
 		}
 		
