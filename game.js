@@ -108,6 +108,6 @@
 		}
 		}
 		function pause(){
-			This.input.disabled = true;
+			this.input.disabled = true;
 		}
 		
