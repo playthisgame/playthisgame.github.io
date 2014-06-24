@@ -59,6 +59,11 @@
 			saveHighScore();
 			var highScore = store.get('highScore');
 			highScoreText = game.add.text(16, 80, 'Best ' + highScore, { fontSize: '32px', fill: '#ecf0f1' });
+			
+			pause_label = game.add.text(w - 100, 20, 'Pause', { font: '24px Arial', fill: '#fff' });
+			pause_label.inputEnabled = true;
+			this.pause_label.events.onInputUp.add(function () {this.game.paused = true;},this);
+			this.game.input.onDown.add(function () {if(this.game.paused)this.game.paused = false;},this);
 
 		}
 		function update() {
