@@ -414,12 +414,10 @@ function levels(level){
 		lazer = boxes.create(300, game.world.height - 137.5, 'lazer');
 		lazer = boxes.create(300, game.world.height - 137.5, 'lazer');
 		lazer = boxes.create(325, game.world.height - 137.5, 'lazer');
-		lazer = boxes.create(350, game.world.height - 137.5, 'lazer');
-		lazer = boxes.create(375, game.world.height - 137.5, 'lazer');
+		blocks = boxes.create(350, game.world.height - 125, 'block2');
+		blocks = boxes.create(375, game.world.height - 150, 'block2');
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
 		blocks = boxes.create(400, game.world.height - 150, 'block2');
-		blocks = boxes.create(425, game.world.height - 125, 'block2');
-		blocks = boxes.create(425, game.world.height - 150, 'block2');
 	}
 	if(level > 30){
 		blocks.kill();	
