@@ -1,6 +1,7 @@
 		var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 		var lives = 3;
 		function preload(){
+			// preload assets(images,sound)
 			game.load.image('block', '/assets/images/block.png');
 			game.load.image('line', '/assets/images/line.png');
 			game.load.image('block2', '/assets/images/block2.png');
@@ -13,6 +14,7 @@
 		}
 	
 		function create() {
+			// scale game for mobile devices
 			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 			this.scale.minWidth = 320;
 			this.scale.minHeight = 480;
@@ -45,9 +47,6 @@
 			player.body.collideWorldBounds = true;
 			
 			player.animations.add('left', [0, 1, 2, 3], 10, true);
-
-			cursors = game.input.keyboard.createCursorKeys();
-			jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);			
 			
 			levels(level);
 			end = game.add.group();
@@ -67,8 +66,8 @@
 			game.physics.arcade.collide(player, boxes, collisionHandler, null, this);
 			game.physics.arcade.collide(player, end, levelEnd, null, this);
 			player.body.velocity.x= 250;
-				
-			if ((jump.isDown || game.input.pointer1.isDown || game.input.mouse.button==0) && player.body.touching.down){
+			jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);	
+			if ((jump.isDown || game.input.mouse.button==0) && player.body.touching.down){
 				jumpAudio = game.add.audio('jump');
 				jumpAudio.play();
 				player.body.velocity.y = -250;
