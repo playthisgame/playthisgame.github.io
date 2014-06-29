@@ -62,10 +62,13 @@
 
 		}
 		function update() {
+			//handle collisions
 			game.physics.arcade.collide(player, group);
 			game.physics.arcade.collide(player, boxes, collisionHandler, null, this);
 			game.physics.arcade.collide(player, end, levelEnd, null, this);
+			//player speed
 			player.body.velocity.x= 250;
+			// if space or mouse is clicked, jump
 			jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);	
 			if ((jump.isDown || game.input.mouse.button==0) && player.body.touching.down){
 				jumpAudio = game.add.audio('jump');
@@ -75,6 +78,7 @@
 				player.body.gravity.y = 350;
 			}
 		}
+		//on collision subtract 1 life, play audio, and restart level
 		function collisionHandler(obj1, obj2) {
 			lives = lives - 1;
 			if(lives === 0){
@@ -86,7 +90,7 @@
 			game.state.start(game.state.current);
 			
 		}
-		
+		// play sound and goto next level
 		function levelEnd(){
 			winAudio = game.add.audio('win');
 			winAudio.play();
@@ -95,7 +99,7 @@
 			levels(level);
 			game.state.start(game.state.current);
 		}
-		
+		// saves highscore with local storage
 		function saveHighScore(){
 		if(store.enabled){
 			if(store.get('highScore')){
