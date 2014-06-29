@@ -70,7 +70,7 @@
 			player.body.velocity.x= 250;
 			// if space or mouse is clicked, jump
 			jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);	
-			if ((jump.isDown || game.input.mouse.button==0) && player.body.touching.down){
+			if ((jump.isDown || game.input.pointer1.isDown || game.input.mouse.button==0) && player.body.touching.down){
 				jumpAudio = game.add.audio('jump');
 				jumpAudio.play();
 				player.body.velocity.y = -250;
