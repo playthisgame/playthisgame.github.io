@@ -419,7 +419,10 @@ function levels(level){
 		lava = boxes.create(375, game.world.height - 125, 'lava');
 		lava = boxes.create(375, game.world.height - 150, 'lava');
 		lava = boxes.create(400, game.world.height - 125, 'lava');
-		
+		lava = boxes.create(550, game.world.height - 125, 'lava');
+		lava = boxes.create(575, game.world.height - 125, 'lava');
+		lava = boxes.create(575, game.world.height - 150, 'lava');
+		lava = boxes.create(600, game.world.height - 125, 'lava');
 	}
 	if(level > 30){
 		blocks.kill();	
