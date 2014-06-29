@@ -72,7 +72,7 @@
 				jumpAudio = game.add.audio('jump');
 				jumpAudio.play();
 				player.body.velocity.y = -250;
-				player.body.bounce.y = 0.1;
+				player.body.bounce.y = 0.0;
 				player.body.gravity.y = 350;
 			}
 		}
