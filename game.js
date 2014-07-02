@@ -22,7 +22,7 @@
 			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 			if(screen.width <= 540){
 				this.scale.maxWidth = 640;
-				this.scale.maxHeight = screen.height;			
+				this.scale.maxHeight = 960;			
 			}else{
 				this.scale.maxWidth = 768;
 				this.scale.maxHeight = 1152;
