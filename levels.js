@@ -1,6 +1,5 @@
 var level = 1;
 function levels(level){
-	game.physics.startSystem(Phaser.Physics.ARCADE);
 	boxes = game.add.group();
 	boxes.enableBody = true;
 	var blocks = boxes.create(0, game.world.height - 0, 'block2');
@@ -11,6 +10,7 @@ function levels(level){
 	lazer.body.immovable = true;
 	fallingBoxes = game.add.group();
 	var falling = fallingBoxes.create(0, game.world.height - 0, 'block2');
+	fallingBoxes.enableBody = true;
 	if(level == 1){
 		game.add.text(187, 200, "Blockenstein", { fill: '#FFFFFF', font:'64px Arial'});
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
