@@ -8,10 +8,6 @@ function levels(level){
 	lava.body.immovable = true;
 	var lazer = boxes.create(0, game.world.height - 0, 'lazer');
 	lazer.body.immovable = true;
-	fallingBoxes = game.add.group();
-	var falling = fallingBoxes.create(0, game.world.height - 0, 'block2');
-	falling.enableBody = true;
-	falling.body.velocity.y = 150;
 	if(level == 1){
 		game.add.text(187, 200, "Blockenstein", { fill: '#FFFFFF', font:'64px Arial'});
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
@@ -429,7 +425,7 @@ function levels(level){
 		lava = boxes.create(600, game.world.height - 125, 'lava');
 	}
 	if(level === 31){
-		falling = fallingBoxes.create(100, game.world.height - 150, 'block2');
+		
 	}
 	if(level > 30){
 		blocks.kill();	
