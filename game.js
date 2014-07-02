@@ -39,7 +39,7 @@
 			group.enableBody = true;
 			
 			var ground = group.create(0, game.world.height - 100, 'line');
-			ground.scale.setTo(2, 2); 
+			ground.scale.setTo(2, 1); 
 			ground.body.immovable = true;
 				
 			player = game.add.sprite(0, game.world.height - 125, 'block');
