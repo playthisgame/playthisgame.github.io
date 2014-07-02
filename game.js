@@ -23,8 +23,8 @@
 			this.scale.minWidth = 320;
 			this.scale.minHeight = 480;
 			if(screen.width <= 540){
-				this.scale.maxWidth = 640;
-				this.scale.maxHeight = 960;			
+				this.scale.maxWidth = 320;
+				this.scale.maxHeight = 480;			
 			}else{
 				this.scale.maxWidth = 768;
 				this.scale.maxHeight = 1152;
