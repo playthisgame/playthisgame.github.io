@@ -3,6 +3,10 @@
 		function preload(){
 			// preload assets(images,sound)
 			game.load.image('block', '/assets/images/block.png');
+			game.load.image('block', '/assets/images/t-block.png');
+			game.load.image('block', '/assets/images/b-block.png');
+			game.load.image('block', '/assets/images/e-block.png');
+			game.load.image('block', '/assets/images/p-block.png');
 			game.load.image('line', '/assets/images/line.png');
 			game.load.image('block2', '/assets/images/block2.png');
 			game.load.image('end', '/assets/images/end.png');
