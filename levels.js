@@ -1,5 +1,6 @@
 var level = 1;
 function levels(level){
+	game.physics.startSystem(Phaser.Physics.ARCADE);
 	boxes = game.add.group();
 	boxes.enableBody = true;
 	var blocks = boxes.create(0, game.world.height - 0, 'block2');
