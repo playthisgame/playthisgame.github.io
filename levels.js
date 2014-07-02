@@ -10,7 +10,6 @@ function levels(level){
 	lazer.body.immovable = true;
 	fallingBoxes = game.add.group();
 	var falling = fallingBoxes.create(0, game.world.height - 0, 'block2');
-	falling.velocity.y = 150;
 	if(level == 1){
 		game.add.text(187, 200, "Blockenstein", { fill: '#FFFFFF', font:'64px Arial'});
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
