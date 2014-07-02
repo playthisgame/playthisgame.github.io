@@ -21,8 +21,8 @@
 			// scale game for mobile devices
 			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 			if(screen.width <= 540){
-				this.scale.maxWidth = 640;
-				this.scale.maxHeight = 960;			
+				this.scale.maxWidth = screen.width;
+				this.scale.maxHeight = screen.height;			
 			}else{
 				this.scale.maxWidth = 768;
 				this.scale.maxHeight = 1152;
