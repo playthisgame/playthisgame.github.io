@@ -23,11 +23,12 @@
 			this.scale.minWidth = 320;
 			this.scale.minHeight = 480;
 			if(screen.width <= 540){
-				this.scale.maxWidth = screen.width;
+				this.scale.maxWidth = 320;
 				this.scale.maxHeight = screen.height;			
 			}else{
 				this.scale.maxWidth = 768;
 				this.scale.maxHeight = 1152;
+				this.scale.pageAlignHorizontally = true;
 			}
 			this.scale.pageAlignVertically = true;
 			game.scale.refresh();
