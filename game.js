@@ -35,13 +35,12 @@
 		
 			game.physics.startSystem(Phaser.Physics.ARCADE);			
 			group = game.add.group();
-			game.stage.backgroundColor = '#3498db';
 			group.enableBody = true;
 			
 			var ground = group.create(0, game.world.height - 100, 'line');
 			ground.scale.setTo(2, 2); 
 			ground.body.immovable = true;
-				
+			game.stage.backgroundColor = '#3498db';
 			player = game.add.sprite(0, game.world.height - 125, 'block');
 
 			game.physics.arcade.enable(player);
@@ -105,15 +104,15 @@
 		}
 		// saves highscore with local storage
 		function saveHighScore(){
-		if(store.enabled){
-			if(store.get('highScore')){
-				if(level > store.get('highScore')){
-					store.set('highScore', level);
+			if(store.enabled){
+				if(store.get('highScore')){
+					if(level > store.get('highScore')){
+						store.set('highScore', level);
+					}
 				}
+				else
+					store.set('highScore', level);
 			}
-			else
-				store.set('highScore', level);
-		}
 		}
 		function pause(){
 			game.input.disabled = true;
