@@ -28,9 +28,9 @@
 			}else{
 				this.scale.maxWidth = 768;
 				this.scale.maxHeight = 1152;
-				this.scale.pageAlignHorizontally = true;
 			}
 			this.scale.pageAlignVertically = true;
+			this.scale.pageAlignHorizontally = true;
 			game.scale.refresh();
 		
 			game.physics.startSystem(Phaser.Physics.ARCADE);			
