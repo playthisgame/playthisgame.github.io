@@ -4,7 +4,7 @@ Blockenstein
 Completed
 ======================
 
-<ul>Levels 1-27(June 9, 2014)</ul>
+<ul>Levels 1-40(July 4, 2014)</ul>
 <ul>Assets for current levels</ul>
 <ul>Lava is introduced</ul>
 <ul>Lasers are introduced</ul>
@@ -14,7 +14,7 @@ Completed
 In Progress
 ======================
 
-<ul>Levels 25+</ul>
+<ul>Levels 40+</ul>
 <ul>Local Storage(?)</ul>
 <ul>Crates</ul>
 <ul>Fullscreen</ul>
@@ -24,7 +24,7 @@ In Progress
 Current Bugs
 ======================
 
-<ul>Larger font sizes currently not available</ul>
 <ul>Resizing issues on iPhone</ul>
 <ul>Low fps on lower-tier devices</ul>
 <ul>High Scores not working on all browsers</ul>
+
