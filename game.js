@@ -47,17 +47,16 @@
 
 			player.body.bounce.y = 0.6;
 			player.body.gravity.y = 250;
-			player.body.collideWorldBounds = true;
-			
-			player.animations.add('left', [0, 1, 2, 3], 10, true);
-			
+			player.body.collideWorldBounds = true;			
 			levels(level);
+			
 			end = game.add.group();
 			end.enableBody = true;
 			var endingBlock = end.create(725, game.world.height - 150, 'end');
 			endingBlock.body.immovable = true;
 			scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
 			livesText = game.add.text(16, 48, 'Lives ' + lives, { fontSize: '32px', fill: '#ecf0f1' });
+			
 			saveHighScore();
 			var highScore = store.get('highScore');
 			highScoreText = game.add.text(16, 80, 'Best ' + highScore, { fontSize: '32px', fill: '#ecf0f1' });
