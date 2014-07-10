@@ -21,3 +21,5 @@ levels.js
 /assets/sounds/jump.wav
 /assets/sounds/lose.wav
 /assets/sounds/win.wav
+phaser.js
+store.js
