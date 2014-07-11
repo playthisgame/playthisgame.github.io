@@ -1,3 +1,22 @@
+function checkForUpdate()
+{
+  if (window.applicationCache != undefined && window.applicationCache != null)
+  {
+    window.applicationCache.addEventListener('updateready', updateApplication);
+  }
+}
+
+function updateApplication(event)
+{
+  if (window.applicationCache.status != 4) return;
+  window.applicationCache.removeEventListener('updateready', updateApplication);
+  window.applicationCache.swapCache();
+  window.location.reload();
+}
+
+checkForUpdate();
+
+
 var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 var lives = 3;
 	function preload(){
