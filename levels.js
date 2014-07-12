@@ -632,7 +632,19 @@ function levels(level){
 		blocks = boxes.create(625, game.world.height - 151, 'purple');
 		blocks = boxes.create(650, game.world.height - 151, 'purple');
 	}
-	if(level > 46){
+	if(level === 47){
+		blocks = boxes.create(200, game.world.height - 125, 'purple');
+		blocks = boxes.create(200, game.world.height - 150, 'purple');
+		blocks = boxes.create(225, game.world.height - 125, 'purple');
+		blocks = boxes.create(250, game.world.height - 125, 'purple');
+		blocks = boxes.create(275, game.world.height - 125, 'purple');
+		blocks = boxes.create(225, game.world.height - 150, 'blue');
+		blocks = boxes.create(250, game.world.height - 150, 'blue');
+		blocks = boxes.create(275, game.world.height - 150, 'blue');
+		blocks = boxes.create(300, game.world.height - 125, 'purple');
+		blocks = boxes.create(300, game.world.height - 150, 'purple');		
+	}
+	if(level > 47){
 		blocks.kill();
 	}					
 }
