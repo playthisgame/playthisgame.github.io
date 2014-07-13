@@ -676,7 +676,13 @@ function levels(level){
 		blocks = boxes.create(650, game.world.height - 150, 'purple');
 		blocks = boxes.create(650, game.world.height - 125, 'purple');
 	}
-	if(level > 49){
+	if(level === 50){
+		blocks = boxes.create(300, game.world.height - 125, 'purple');
+		blocks = boxes.create(600, game.world.height - 125, 'purple');
+		blocks = boxes.create(625, game.world.height - 125, 'purple');
+		blocks = boxes.create(625, game.world.height - 150, 'purple');
+	}
+	if(level > 50){
 		blocks.kill();
 	}					
 }
