@@ -4,7 +4,7 @@ Blockenstein
 Completed
 ======================
 
-<ul>Levels 1-40(July 4, 2014)</ul>
+<ul>Levels 1-50(July 12, 2014)</ul>
 <ul>Assets for current levels</ul>
 <ul>Lava is introduced</ul>
 <ul>Lasers are introduced</ul>
