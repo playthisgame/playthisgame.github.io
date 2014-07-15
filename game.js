@@ -69,15 +69,15 @@ var lives = 3;
 		game.physics.arcade.collide(player, boxes, collisionHandler, null, this);
 		game.physics.arcade.collide(player, end, levelEnd, null, this);
 		//player speed
-		player.body.velocity.x= 250;
+		player.body.velocity.x= 150;
 		// if space or mouse is clicked, jump
 		jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);	
 		if ((jump.isDown || game.input.pointer1.isDown || game.input.mouse.button==0) && player.body.touching.down){
 			jumpAudio = game.add.audio('jump');
 			jumpAudio.play();
-			player.body.velocity.y = -250;
+			player.body.velocity.y = -150;
 			player.body.bounce.y = 0.0;
-			player.body.gravity.y = 350;
+			player.body.gravity.y = 100;
 		}
 	}
 	//on collision subtract 1 life, play audio, and restart level
