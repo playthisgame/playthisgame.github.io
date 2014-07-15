@@ -77,7 +77,7 @@ var lives = 3;
 			jumpAudio.play();
 			player.body.velocity.y = -250;
 			player.body.bounce.y = 0.0;
-			player.body.gravity.y = 350;
+			player.body.gravity.y = 150;
 		}
 	}
 	//on collision subtract 1 life, play audio, and restart level
