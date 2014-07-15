@@ -46,7 +46,7 @@ var lives = 3;
 		game.physics.arcade.enable(player);
 
 		player.body.bounce.y = 0.6;
-		player.body.gravity.y = 250;
+		player.body.gravity.y = 100;
 		player.body.collideWorldBounds = true;			
 		levels(level);
 		
@@ -75,9 +75,9 @@ var lives = 3;
 		if ((jump.isDown || game.input.pointer1.isDown || game.input.mouse.button==0) && player.body.touching.down){
 			jumpAudio = game.add.audio('jump');
 			jumpAudio.play();
-			player.body.velocity.y = -250;
+			player.body.velocity.y = -100;
 			player.body.bounce.y = 0.0;
-			player.body.gravity.y = 350;
+			player.body.gravity.y = 150;
 		}
 	}
 	//on collision subtract 1 life, play audio, and restart level
