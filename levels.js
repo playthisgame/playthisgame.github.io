@@ -781,7 +781,7 @@ function levels(level){
 		blocks = boxes.create(250, game.world.height - 125, 'blue');
 		blocks = boxes.create(275, game.world.height - 125, 'blue');
 		blocks = boxes.create(250, game.world.height - 150, 'blue');
-		blocks = boxes.create(275, game.world.height - 150, 'block2');
+		blocks = boxes.create(275, game.world.height - 150, 'blue');
 		blocks = boxes.create(300, game.world.height - 150, 'block2');
 		blocks = boxes.create(300, game.world.height - 125, 'block2');
 		blocks = boxes.create(325, game.world.height - 125, 'block2');
