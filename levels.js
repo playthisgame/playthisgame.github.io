@@ -826,4 +826,16 @@ function levels(level){
 		blocks = boxes.create(425, game.world.height - 150, 'turquoise');
 		blocks = boxes.create(650, game.world.height - 125, 'turquoise');
 	}
+	if(level === 65){
+		blocks = boxes.create(200, game.world.height - 125, 'block');
+		blocks = boxes.create(200, game.world.height - 237.5, 'turquoise');
+		blocks = boxes.create(225, game.world.height - 125, 'turquoise');
+		blocks = boxes.create(225, game.world.height - 237.5, 'turquoise');
+		blocks = boxes.create(400, game.world.height - 150, 'turquoise');
+		blocks = boxes.create(425, game.world.height - 150, 'turquoise');
+		blocks = boxes.create(450, game.world.height - 150, 'turquoise');
+		blocks = boxes.create(600, game.world.height - 125, 'turquoise');
+		blocks = boxes.create(650, game.world.height - 125, 'turquoise');
+		blocks = boxes.create(650, game.world.height - 150, 'turquoise');
+	}
 }
