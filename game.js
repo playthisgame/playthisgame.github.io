@@ -60,8 +60,6 @@ var lives = 3;
 		saveHighScore();
 		var highScore = store.get('highScore');
 		highScoreText = game.add.text(16, 80, 'Best ' + highScore, { fontSize: '32px', fill: '#ecf0f1' });
-		
-
 	}
 	function update() {
 		//handle collisions
@@ -89,8 +87,7 @@ var lives = 3;
 		}
 		loseAudio = game.add.audio('lose');
 		loseAudio.play();
-		game.state.start(game.state.current);
-		
+		game.state.start(game.state.current);		
 	}
 	// play sound and goto next level
 	function levelEnd(){
