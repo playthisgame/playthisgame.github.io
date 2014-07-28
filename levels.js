@@ -946,11 +946,11 @@ function levels(level){
 		blocks = boxes.create(200, game.world.height - 150, 'emerald');
 		blocks = boxes.create(225, game.world.height - 150, 'emerald');
 		blocks = boxes.create(250, game.world.height - 125, 'emerald');
-		blocks = boxes.create(400, game.world.height - 125, 'emerald');
-		blocks = boxes.create(425, game.world.height - 125, 'blue');
+		blocks = boxes.create(425, game.world.height - 125, 'emerald');
 		blocks = boxes.create(450, game.world.height - 125, 'blue');
 		blocks = boxes.create(475, game.world.height - 125, 'blue');
-		blocks = boxes.create(500, game.world.height - 125, 'emerald');
+		blocks = boxes.create(500, game.world.height - 125, 'blue');
+		blocks = boxes.create(525, game.world.height - 125, 'emerald');
 		blocks = boxes.create(600, game.world.height - 125, 'emerald');
 		blocks = boxes.create(600, game.world.height - 150, 'emerald');
 	}
