@@ -1048,4 +1048,13 @@ function levels(level){
 		blocks = boxes.create(600, game.world.height - 150, 'emerald');
 		blocks = boxes.create(700, game.world.height - 125, 'emerald');
 	}
+	if(level === 82){
+		blocks = boxes.create(250, game.world.height - 125, 'emerald');
+		blocks = boxes.create(275, game.world.height - 150, 'emerald');
+		blocks = boxes.create(300, game.world.height - 175, 'emerald');
+		blocks = boxes.create(500, game.world.height - 125, 'emerald');
+		blocks = boxes.create(600, game.world.height - 125, 'emerald');
+		blocks = boxes.create(600, game.world.height - 150, 'emerald');
+		
+	}
 }
