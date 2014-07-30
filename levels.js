@@ -1139,8 +1139,8 @@ function levels(level){
 		lava = boxes.create(350, game.world.height - 250, 'purple');
 		lava = boxes.create(412.5, game.world.height - 275, 'purple');
 		lava = boxes.create(475, game.world.height - 250, 'purple');
-		lava = boxes.create(600, game.world.height - 125, 'purple');
-		lava = boxes.create(625, game.world.height - 125, 'purple');
-		lava = boxes.create(625, game.world.height - 150, 'purple');
+		lava = boxes.create(650, game.world.height - 125, 'purple');
+		lava = boxes.create(675, game.world.height - 125, 'purple');
+		lava = boxes.create(675, game.world.height - 150, 'purple');
 	}
 }
