@@ -29,6 +29,7 @@ var lives = 3;
 			this.scale.maxWidth = 768;
 			this.scale.maxHeight = 1152;
 		}
+		this.scale.pageAlignVertically = true;
 		this.scale.pageAlignHorizontally = true;
 		game.scale.refresh();
 	
