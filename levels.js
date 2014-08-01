@@ -478,8 +478,8 @@ function levels(level){
 	if(level === 35){
 		blocks.kill();
 		blocks = boxes.create(250, game.world.height - 125, 'emerald');
-		blocks = boxes.create(450, game.world.height - 125, 'emerald');
-		blocks = boxes.create(450, game.world.height - 150, 'emerald');
+		blocks = boxes.create(400, game.world.height - 125, 'emerald');
+		blocks = boxes.create(400, game.world.height - 150, 'emerald');
 		blocks = boxes.create(700, game.world.height - 125, 'emerald');
 		blocks = boxes.create(700, game.world.height - 150, 'emerald');
 		blocks = boxes.create(700, game.world.height - 175, 'emerald');
@@ -1176,7 +1176,7 @@ function levels(level){
 		blocks = boxes.create(675, game.world.height - 150, 'block2');
 	}
 	if(level === 93){
-	
+		blocks = boxes.create(250, game.world.height - 125, 'block2');
 	}
 	if(level === 100){
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
