@@ -1175,11 +1175,16 @@ function levels(level){
 		blocks = boxes.create(675, game.world.height - 125, 'block2');
 		blocks = boxes.create(675, game.world.height - 150, 'block2');
 	}
+	if(level === 
 	if(level === 100){
 		blocks = boxes.create(400, game.world.height - 125, 'block2');
 		blocks = boxes.create(400, game.world.height - 150, 'block2');
 		blocks = boxes.create(625, game.world.height - 125, 'block2');
 		blocks = boxes.create(650, game.world.height - 150, 'block2');
 		blocks = boxes.create(650, game.world.height - 125, 'block2');
+	}
+	if(level >== 100){
+		level === 1;
+		game.state.start(game.state.current);
 	}
 }
