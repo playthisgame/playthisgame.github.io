@@ -19,11 +19,11 @@ var lives = 3;
 0
 	function create() {
 		// scale game for mobile devices
-		this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
-		this.scale.minWidth = 300;
+		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+		this.scale.minWidth = 320;
 		this.scale.minHeight = 480;
 		if(screen.width <= 641){
-			this.scale.maxWidth = 320;
+			this.scale.maxWidth = 750;
 			this.scale.maxHeight = screen.height;			
 		}else{
 			this.scale.maxWidth = 750;
