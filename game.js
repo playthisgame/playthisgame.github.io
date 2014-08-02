@@ -22,7 +22,7 @@ var lives = 3;
 		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 		this.scale.minWidth = 320;
 		this.scale.minHeight = 480;
-		if(screen.width <= 540){
+		if(screen.width <= 570){
 			this.scale.maxWidth = 300;
 			this.scale.maxHeight = screen.height;			
 		}else{
