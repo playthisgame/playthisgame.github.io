@@ -23,7 +23,7 @@ var lives = 3;
 		this.scale.minWidth = 320;
 		this.scale.minHeight = 480;
 		if(screen.width <= 641){
-			this.scale.maxWidth = screen.width;
+			this.scale.maxWidth = 320;
 			this.scale.maxHeight = screen.height;			
 		}else{
 			this.scale.maxWidth = 750;
