@@ -28,7 +28,7 @@ var lives = 3;
 			this.scale.maxHeight = screen.height;			
 		}else{
 			this.scale.maxWidth = 768;
-			this.scale.maxHeight = 584;
+			this.scale.maxHeight = 600;
 		}
 		this.scale.pageAlignVertically = true;
 		this.scale.pageAlignHorizontally = true;
