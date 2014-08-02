@@ -23,7 +23,7 @@ var lives = 3;
 		this.scale.minWidth = 300;
 		this.scale.minHeight = 480;
 		if(screen.width <= 540){
-			this.scale.maxWidth = 300;
+			this.scale.maxWidth = 320;
 			this.scale.maxHeight = screen.height;			
 			this.scale.pageAlignVertically = true;
 		}else{
