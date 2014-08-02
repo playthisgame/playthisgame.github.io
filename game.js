@@ -1,4 +1,3 @@
-
 var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 var lives = 3;
 	function preload(){
@@ -26,11 +25,11 @@ var lives = 3;
 		if(screen.width <= 540){
 			this.scale.maxWidth = 300;
 			this.scale.maxHeight = screen.height;			
+			this.scale.pageAlignVertically = true;
 		}else{
 			this.scale.maxWidth = 768;
 			this.scale.maxHeight = 600;
 		}
-		this.scale.pageAlignVertically = true;
 		this.scale.pageAlignHorizontally = true;
 		game.scale.refresh();
 	
