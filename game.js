@@ -1,4 +1,4 @@
-var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(320, 533, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 var lives = 3;
 	function preload(){
 		// preload assets(images,sound)
@@ -16,7 +16,6 @@ var lives = 3;
 		game.load.audio('lose', '/assets/sounds/lose.wav');
 		game.load.audio('win', '/assets/sounds/win.wav');
 	}
-0
 	function create() {
 		// scale game for mobile devices
 		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
