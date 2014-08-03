@@ -60,7 +60,6 @@ var lives = 3;
 		saveHighScore();
 		var highScore = store.get('highScore');
 		highScoreText = game.add.text(16, 80, 'Best ' + highScore, { fontSize: '32px', fill: '#ecf0f1' });
-		highScoreText = game.add.text(32, 80, <iframe scrolling='no' style='border: 0; height: 60px;' src='//coinurl.com/get.php?id=28606'></iframe>, { fontSize: '32px', fill: '#ecf0f1' });
 	}
 	function update() {
 		//handle collisions
