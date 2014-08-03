@@ -24,7 +24,6 @@ var lives = 3;
 		this.scale.minHeight = 480;
 		this.scale.maxWidth = 750;
 		this.scale.maxHeight = 600;
-		this.game.stage.scale.setScreenSize(true);
 		this.scale.pageAlignHorizontally = true;
 		game.scale.refresh();
 	
