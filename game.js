@@ -20,10 +20,6 @@ var lives = 3;
 	function create() {
 		// scale game for mobile devices
 		this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
-		this.scale.minWidth = 240;
-		this.scale.minHeight = 480;
-		this.scale.maxWidth = 750;
-		this.scale.maxHeight = 600;
 		this.scale.pageAlignHorizontally = true;
 		game.scale.refresh();
 	
