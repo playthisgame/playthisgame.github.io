@@ -1,4 +1,4 @@
-var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(70%, 60%, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 var lives = 3;
 	function preload(){
 		// preload assets(images,sound)
