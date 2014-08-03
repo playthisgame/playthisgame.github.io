@@ -21,8 +21,8 @@ var lives = 3;
 		// scale game for mobile devices
 		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 		if(screen.width <= 640){
-			this.scale.minWidth = 320;
-			this.scale.minHeight = screen.height;
+			this.scale.maxWidth = 320;
+			this.scale.maxHeight = screen.height;
 		}else{
 			this.scale.maxWidth = 1024;
 			this.scale.maxHeight = 600;
