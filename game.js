@@ -30,7 +30,6 @@ var lives = 3;
 			this.scale.maxHeight = 600;
 		}
 		this.scale.pageAlignVertically = true;
-		this.scale.pageAlignHorizontally = true;
 		game.scale.refresh();
 	
 		game.physics.startSystem(Phaser.Physics.ARCADE);			
