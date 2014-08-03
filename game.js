@@ -1,4 +1,4 @@
-var game = new Phaser.Game(320, 533, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 var lives = 3;
 	function preload(){
 		// preload assets(images,sound)
@@ -22,7 +22,7 @@ var lives = 3;
 		this.scale.minWidth = 310;
 		this.scale.minHeight = 480;
 		if(screen.width <= 540){
-			this.scale.maxWidth = 320;
+			this.scale.maxWidth = 750;
 			this.scale.maxHeight = 640;			
 		}else{
 			this.scale.maxWidth = 750;
