@@ -16,13 +16,14 @@ var lives = 3;
 		game.load.audio('lose', '/assets/sounds/lose.wav');
 		game.load.audio('win', '/assets/sounds/win.wav');
 	}
+
 	function create() {
 		// scale game for mobile devices
 		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		this.scale.minWidth = 310;
+		this.scale.minWidth = 320;
 		this.scale.minHeight = 480;
-		if(screen.width <= 540){
-			this.scale.maxWidth = screen.width;
+		if(screen.width <= 640){
+			this.scale.maxWidth = 320;
 			this.scale.maxHeight = screen.height;			
 		}else{
 			this.scale.maxWidth = 750;
