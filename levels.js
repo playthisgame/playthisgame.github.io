@@ -1227,8 +1227,6 @@ function levels(level){
 		blocks = boxes.create(650, game.world.height - 125, 'block2');
 	}
 	if(level > 100){
-		store.clear();
-		level = 1;
-		game.state.start(game.state.current);
+		game.add.text(187, 200, "Game Over", { fill: '#FFFFFF', font:'64px Arial'});
 	}
 }
