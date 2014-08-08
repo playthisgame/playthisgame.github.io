@@ -8,7 +8,7 @@ var lives = 3;
 		game.load.image('emerald', '/assets/images/e-block.png');
 		game.load.image('purple', '/assets/images/p-block.png');
 		game.load.image('line', '/assets/images/line.png');
-		game.load.image('block2', '/assets/images/block2.png');
+		game.load.image('grey', '/assets/images/block2.png');
 		game.load.image('end', '/assets/images/end.png');
 		game.load.image('lava', '/assets/images/lava.png');
 		game.load.image('lazer', '/assets/images/lazer.png');
