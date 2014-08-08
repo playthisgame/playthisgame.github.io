@@ -2,7 +2,7 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 var lives = 3;
 	function preload(){
 		// preload assets(images,sound)
-		game.load.image('block', '/assets/images/block.png');
+		game.load.image('player', '/assets/images/block.png');
 		game.load.image('turquoise', '/assets/images/t-block.png');
 		game.load.image('blue', '/assets/images/b-block.png');
 		game.load.image('emerald', '/assets/images/e-block.png');
@@ -40,13 +40,14 @@ var lives = 3;
 		ground.scale.setTo(2, 2); 
 		ground.body.immovable = true;
 		game.stage.backgroundColor = '#3498db';
-		player = game.add.sprite(0, game.world.height - 125, 'block');
+		player = game.add.sprite(0, game.world.height - 125, 'player');
 
 		game.physics.arcade.enable(player);
 
 		player.body.bounce.y = 0.6;
 		player.body.gravity.y = 250;
-		player.body.collideWorldBounds = true;			
+		player.body.collideWorldBounds = true;
+		
 		levels(level);
 		
 		end = game.add.group();
