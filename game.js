@@ -57,7 +57,7 @@ var lives = 3;
 		endingBlock.body.immovable = true;
 		
 		scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
-		livesText = game.add.text(16, 48, 'Lives ' + lives, { fontSize: '32px', fill: '#ecf0f1' });
+		livesText = game.add.text(16, 48, 'Lives ' + lives, { font: 'LCDSolid', fontSize: '32px', fill: '#ecf0f1' });
 		
 		saveHighScore();
 		var highScore = store.get('highScore');
