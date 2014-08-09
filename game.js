@@ -56,12 +56,12 @@ var lives = 3;
 		var endingBlock = end.create(725, game.world.height - 200, 'end');
 		endingBlock.body.immovable = true;
 		
-		scoreText = game.add.text(16, 16, level, { fontSize: '32px', fill: '#ecf0f1' });
+		scoreText = game.add.text(16, 16, level, { font: '32px VT323', fill: '#ecf0f1' });
 		livesText = game.add.text(16, 48, 'Lives ' + lives, { font: '32px VT323', fill: '#ecf0f1' });
 		
 		saveHighScore();
 		var highScore = store.get('highScore');
-		highScoreText = game.add.text(16, 80, 'Best ' + highScore, { fontSize: '32px', fill: '#ecf0f1' });
+		highScoreText = game.add.text(16, 80, 'Best ' + highScore, { font: '32px VT323', fill: '#ecf0f1' });
 	}
 	function update() {
 		//handle collisions
