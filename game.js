@@ -114,5 +114,4 @@ var lives = 3;
 	}
 	function pause(){
 		game.input.disabled = true;
-	}
-	
+	}	
