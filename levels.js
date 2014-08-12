@@ -169,7 +169,7 @@ function levels(level){
 		blocks.body.immovable = true;		
 	}
 	if(level === 17){
-		game.add.text(16, 100, "Watch out for the lava", { fill: '#c0392b', font: '64px VT323'});
+		game.add.text(16, 100, "Watch out for the lava!", { fill: '#c0392b', font: '64px VT323'});
 		blocks = boxes.create(275, game.world.height - 125, 'grey');
 		blocks = boxes.create(275, game.world.height - 150, 'grey');
 		lava = boxes.create(300, game.world.height - 125, 'lava');
@@ -238,7 +238,7 @@ function levels(level){
 		lava = boxes.create(475, game.world.height - 250, 'lava');
 	}
 	if(level === 22){
-		blocks.kill();
+		game.add.text(16, 100, "Watch out for the lasers!", { fill: '#c0392b', font: '64px VT323'});
 		blocks = boxes.create(100, game.world.height - 151, 'grey');
 		lazer = boxes.create(125, game.world.height - 151, 'lazer');
 		lazer = boxes.create(150, game.world.height - 151, 'lazer');
