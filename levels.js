@@ -11,7 +11,7 @@ function levels(level){
 	game.world.x = canvas.width/2;
 	game.world.y = canvas.height/2;
 	if(level == 1){
-		game.add.text(16, 200, "Blockenstein", { fill: '#FFFFFF', font: '64px VT323',});
+		game.add.text(16, 64, "Blockenstein", { fill: '#FFFFFF', font: '64px VT323',});
 		blocks = boxes.create(400, game.world.height - 125, 'grey');
 		blocks = boxes.create(400, game.world.height - 150, 'grey');
 		blocks = boxes.create(625, game.world.height - 125, 'grey');
