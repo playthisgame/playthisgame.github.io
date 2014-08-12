@@ -169,7 +169,7 @@ function levels(level){
 		blocks.body.immovable = true;		
 	}
 	if(level === 17){
-		blocks.kill();
+		game.add.text(16, 100, "Watch out for the lava", { fill: '##c0392b', font: '64px VT323'});
 		blocks = boxes.create(275, game.world.height - 125, 'grey');
 		blocks = boxes.create(275, game.world.height - 150, 'grey');
 		lava = boxes.create(300, game.world.height - 125, 'lava');
