@@ -104,7 +104,7 @@ var lives = 3;
 	function saveHighScore(){
 		if(store.enabled){
 			if(store.get('highScore')){
-				if(level > store.get('highScore') || level <= 100){
+				if(level > store.get('highScore') && level <= 100){
 					store.set('highScore', level);
 				}
 			}
