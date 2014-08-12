@@ -8,8 +8,6 @@ function levels(level){
 	lava.body.immovable = true;
 	var lazer = boxes.create(0, game.world.height - 0, 'lazer');
 	lazer.body.immovable = true;
-	game.world.x = canvas.width/2;
-	game.world.y = canvas.height/2;
 	if(level == 1){
 		game.add.text(16, 100, "Blockenstein", { fill: '#FFFFFF', font: '64px VT323',});
 		blocks = boxes.create(400, game.world.height - 125, 'grey');
