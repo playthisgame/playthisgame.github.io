@@ -59,7 +59,7 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		
 		saveHighScore();
 		var highScore = store.get('highScore');
-		highScoreText = game.add.text(16, 80, 'Best ' + highScore, { font: '32px VT323', fill: '#ecf0f1' });
+		highScoreText = game.add.text(16, 48, 'Best ' + highScore, { font: '32px VT323', fill: '#ecf0f1' });
 	}
 	function update() {
 		//handle collisions
