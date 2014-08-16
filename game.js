@@ -1,5 +1,4 @@
 var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
-var lives = 3;
 	function preload(){
 		// preload assets(images,sound)
 		game.load.image('player', '/assets/images/block.png');
@@ -57,7 +56,6 @@ var lives = 3;
 		endingBlock.body.immovable = true;
 		
 		scoreText = game.add.text(16, 16, level, { font: '32px VT323', fill: '#ecf0f1' });
-		livesText = game.add.text(16, 48, 'Lives ' + lives, { font: '32px VT323', fill: '#ecf0f1' });
 		
 		saveHighScore();
 		var highScore = store.get('highScore');
@@ -82,11 +80,6 @@ var lives = 3;
 	}
 	//on collision subtract 1 life, play audio, and restart level
 	function collisionHandler(obj1, obj2) {
-		lives = lives - 1;
-		if(lives === 0){
-			level = 1;
-			lives = 3;
-		}
 		loseAudio = game.add.audio('lose');
 		loseAudio.play();
 		game.state.start(game.state.current);		
@@ -95,7 +88,6 @@ var lives = 3;
 	function levelEnd(){
 		winAudio = game.add.audio('win');
 		winAudio.play();
-		lives++;
 		level++;
 		levels(level);
 		game.state.start(game.state.current);
