@@ -644,7 +644,6 @@ function levels(level){
 		blocks = boxes.create(275, game.world.height - 150, 'blue');
 		blocks = boxes.create(300, game.world.height - 125, 'purple');
 		blocks = boxes.create(300, game.world.height - 150, 'purple');
-		blocks = boxes.create(500, game.world.height - 151, 'purple');
 		blocks = boxes.create(525, game.world.height - 151, 'purple');
 		blocks = boxes.create(550, game.world.height - 151, 'purple');
 		blocks = boxes.create(575, game.world.height - 151, 'purple');
