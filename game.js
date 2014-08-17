@@ -98,8 +98,19 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		level++;
 		levels(level);
 		if(store.enabled){
-			store.set('cloudsx', clouds.x);
-			store.set('cloud2x', cloud2.x);
+		    if(store.get('cloudsx') < 750)){ 
+				store.set('cloudsx', clouds.x);
+			}
+			else{
+				store.set('cloudsx', 0);
+			}
+			if(store.get('cloud2x') < 750)){ 
+				store.set('cloud2x', cloud2.x);
+			}
+			else{
+				store.set('cloud2x', 0);
+			}
+		}
 		}
 
 		game.state.start(game.state.current);
