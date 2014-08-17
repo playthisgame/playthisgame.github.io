@@ -104,7 +104,7 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 			else{
 				store.set('cloudsx', 0);
 			}
-			if(store.get('cloud2x') < 750)){ 
+			if(store.get('cloud2x') < 750){ 
 				store.set('cloud2x', cloud2.x);
 			}
 			else{
