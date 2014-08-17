@@ -11,6 +11,7 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		game.load.image('end', '/assets/images/end.png');
 		game.load.image('lava', '/assets/images/lava.png');
 		game.load.image('lazer', '/assets/images/lazer.png');
+		game.load.image('cloud', '/assets/images/cloud.png');
 		game.load.audio('jump', '/assets/sounds/jump.wav');
 		game.load.audio('lose', '/assets/sounds/lose.wav');
 		game.load.audio('win', '/assets/sounds/win.wav');
@@ -46,7 +47,16 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		player.body.gravity.y = 250;
 		player.body.collideWorldBounds = true;
 		
-		levels(level);		
+		levels(level);
+		cloud = game.add.sprite(25, game.world.height - 400, 'cloud');
+		cloud = game.add.sprite(50, game.world.height - 400, 'cloud');
+		cloud = game.add.sprite(75, game.world.height - 400, 'cloud');
+		cloud = game.add.sprite(100, game.world.height - 400, 'cloud');
+		cloud = game.add.sprite(100, game.world.height - 425, 'cloud');
+		cloud = game.add.sprite(125, game.world.height - 425, 'cloud');
+		cloud = game.add.sprite(150, game.world.height - 425, 'cloud');
+		cloud = game.add.sprite(175, game.world.height - 425, 'cloud');
+		
 		end = game.add.group();
 		end.enableBody = true;
 		var endingBlock = end.create(725, game.world.height - 0, 'end');
