@@ -97,6 +97,11 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		winAudio.play();
 		level++;
 		levels(level);
+		if(store.enabled){
+			store.set('cloudsx', clouds.x);
+			store.set('cloud2x', cloud2.x);
+		}
+
 		game.state.start(game.state.current);
 	}
 	// saves highscore with local storage
