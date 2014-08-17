@@ -39,18 +39,17 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		ground.scale.setTo(2, 2); 
 		ground.body.immovable = true;
 		game.stage.backgroundColor = '#3498db';
+		
 		player = game.add.sprite(0, game.world.height - 125, 'player');
-
 		game.physics.arcade.enable(player);
-
 		player.body.bounce.y = 0.6;
 		player.body.gravity.y = 250;
 		player.body.collideWorldBounds = true;
 		
-		levels(level);
-		
+		levels(level);		
 		end = game.add.group();
 		end.enableBody = true;
+		var endingBlock = end.create(725, game.world.height - 0, 'end');
 		var endingBlock = end.create(725, game.world.height - 150, 'end');
 		var endingBlock = end.create(725, game.world.height - 200, 'end');
 		endingBlock.body.immovable = true;
