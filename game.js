@@ -51,9 +51,9 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		clouds = game.add.sprite(randomNumber(0, 200), game.world.height - randomNumber(400, 450), 'cloud');
 		cloud2 = game.add.sprite(randomNumber(400, 600), game.world.height - randomNumber(350, 400), 'cloud');
 		game.physics.arcade.enable(clouds);
-		clouds.body.velocity.x = 10;
+		clouds.body.velocity.x = 5;
 		game.physics.arcade.enable(cloud2);
-		cloud2.body.velocity.x = 10;
+		cloud2.body.velocity.x = 5;
 		
 		end = game.add.group();
 		end.enableBody = true;
