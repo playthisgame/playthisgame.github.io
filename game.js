@@ -112,7 +112,7 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		}
 	}
 	function randomNumber(min, max) {
-		return Math.random() * (max - min) + min;
+		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 	function pause(){
 		game.input.disabled = true;
