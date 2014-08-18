@@ -49,7 +49,7 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		
 		levels(level);
 		clouds = game.add.sprite(randomNumber(0, 200), game.world.height - randomNumber(400, 450), 'cloud');
-		cloud2 = game.add.sprite(randomNumber(400, 650), game.world.height - randomNumber(350, 400), 'cloud');
+		cloud2 = game.add.sprite(randomNumber(400, 600), game.world.height - randomNumber(350, 400), 'cloud');
 		game.physics.arcade.enable(clouds);
 		clouds.body.velocity.x = 10;
 		game.physics.arcade.enable(cloud2);
@@ -74,6 +74,7 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		game.physics.arcade.collide(player, boxes, collisionHandler, null, this);
 		game.physics.arcade.collide(player, end, levelEnd, null, this);
 		//player speed
+		if(game.input.mouse.button==0){
 		player.body.velocity.x= 250;
 		// if space or mouse is clicked, jump
 		jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);	
@@ -83,6 +84,7 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 			player.body.velocity.y = -250;
 			player.body.bounce.y = 0.0;
 			player.body.gravity.y = 350;
+		}
 		}
 	}
 	//on collision subtract 1 life, play audio, and restart level
