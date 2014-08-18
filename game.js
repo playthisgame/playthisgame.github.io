@@ -74,12 +74,10 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 		game.physics.arcade.collide(player, boxes, collisionHandler, null, this);
 		game.physics.arcade.collide(player, end, levelEnd, null, this);
 		//player speed
-		if(game.input.mouse.button==0){
-			player.body.velocity.x= 250;
-			var game === 1;
+		player.body.velocity.x= 250;
 		// if space or mouse is clicked, jump
 		jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);	
-		if ((jump.isDown || game.input.pointer1.isDown || game.input.mouse.button==0) && player.body.touching.down && game === 1){
+		if ((jump.isDown || game.input.pointer1.isDown || game.input.mouse.button==0) && player.body.touching.down){
 			jumpAudio = game.add.audio('jump');
 			jumpAudio.play();
 			player.body.velocity.y = -250;
