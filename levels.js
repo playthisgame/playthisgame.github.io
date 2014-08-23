@@ -1,4 +1,3 @@
-(function(){
 var level = 1;
 function levels(level){
 	boxes = game.add.group();
@@ -1227,4 +1226,3 @@ function levels(level){
 		game.add.text(16, 80, "Game Over", { fill: '#FFFFFF', font: '64px VT323'});
 	}
 }
-})();

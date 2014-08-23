@@ -1,4 +1,3 @@
-(function(){
 var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 function preload(){
 	// preload assets(images,sound)
@@ -117,5 +116,4 @@ function randomNumber(min, max) {
 }
 function pause(){
 	game.input.disabled = true;
-}	
-})();
+}
