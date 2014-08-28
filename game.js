@@ -1,5 +1,5 @@
 var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
-lives = 3;
+lives = 5;
 function preload(){
 	// preload assets(images,sound)
 	game.load.image('player', '/assets/images/block.png');
@@ -93,7 +93,7 @@ function collisionHandler(obj1, obj2) {
 	lives = lives - 1;
 	if(lives === 0){
 		level = 1;
-		lives = 3;
+		lives = 5;
 	}
 	game.state.start(game.state.current);		
 }
