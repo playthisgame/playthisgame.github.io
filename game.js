@@ -1,4 +1,5 @@
 var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
+lives = 3;
 function preload(){
 	// preload assets(images,sound)
 	game.load.image('player', '/assets/images/block.png');
@@ -63,10 +64,10 @@ function create() {
 	endingBlock.body.immovable = true;
 	
 	scoreText = game.add.text(16, 16, level, { font: '32px VT323', fill: '#ecf0f1' });
-	
+	livesText = game.add.text(16, 48, 'Lives' + lives, { font: '32px VT323', fill: '#ecf0f1' });
 	saveHighScore();
 	var highScore = store.get('highScore');
-	highScoreText = game.add.text(16, 48, 'Best ' + highScore, { font: '32px VT323', fill: '#ecf0f1' });
+	highScoreText = game.add.text(16, 80, 'Best ' + highScore, { font: '32px VT323', fill: '#ecf0f1' });
 }
 function update() {
 	//handle collisions
@@ -89,12 +90,18 @@ function update() {
 function collisionHandler(obj1, obj2) {
 	loseAudio = game.add.audio('lose');
 	loseAudio.play();
+	lives = lives - 1;
+	if(lives === 0){
+		level = 1;
+		lives = 3;
+	}
 	game.state.start(game.state.current);		
 }
 // play sound and goto next level
 function levelEnd(){
 	winAudio = game.add.audio('win');
 	winAudio.play();
+	lives++;
 	level++;
 	levels(level);
 	game.state.start(game.state.current);
