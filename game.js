@@ -1,50 +1,6 @@
 var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 lives = 5;
-
-//on collision subtract 1 life, play audio, and restart level
-function collisionHandler(obj1, obj2) {
-	loseAudio = game.add.audio('lose');
-	loseAudio.play();
-	lives = lives - 1;
-	if(lives === 0){
-		level = 1;
-		lives = 5;
-	}
-	game.state.start(game.state.current);		
-}
-// play sound and goto next level
-function levelEnd(){
-	winAudio = game.add.audio('win');
-	winAudio.play();
-	lives++;
-	level++;
-	levels(level);
-	game.state.start(game.state.current);
-}
-// saves highscore with local storage
-function saveHighScore(){
-	if(store.enabled){
-		if(store.get('highScore')){
-			if(level > store.get('highScore') && level <= 100){
-				store.set('highScore', level);
-			}
-		}
-		else
-			store.set('highScore', level);
-	}
-}
-function randomNumber(min, max) {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-function pause(){
-	game.input.disabled = true;
-}
-
-
-// Create our 'main' state that will contain the game
-var mainState = {
-
-    preload: function() { 
+function preload(){
 	// preload assets(images,sound)
 	game.load.image('player', '/assets/images/block.png');
 	game.load.image('turquoise', '/assets/images/t-block.png');
@@ -60,9 +16,9 @@ var mainState = {
 	game.load.audio('jump', '/assets/sounds/jump.wav');
 	game.load.audio('lose', '/assets/sounds/lose.wav');
 	game.load.audio('win', '/assets/sounds/win.wav');
-    },
+}
 
-    create: function() { 
+function create() {
 	// scale game for mobile devices
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.minWidth = 320;
@@ -112,9 +68,8 @@ var mainState = {
 	saveHighScore();
 	var highScore = store.get('highScore');
 	highScoreText = game.add.text(16, 80, 'Best ' + highScore, { font: '32px VT323', fill: '#ecf0f1' });
-    },
-
-    update: function() {
+}
+function update() {
 	//handle collisions
 	game.physics.arcade.collide(player, group);
 	game.physics.arcade.collide(player, boxes, collisionHandler, null, this);
@@ -130,9 +85,42 @@ var mainState = {
 		player.body.bounce.y = 0.0;
 		player.body.gravity.y = 350;
 	}
-    },
-};
-
-// Add and start the 'main' state to start the game
-game.state.add('main', mainState);  
-game.state.start('main');  
+}
+//on collision subtract 1 life, play audio, and restart level
+function collisionHandler(obj1, obj2) {
+	loseAudio = game.add.audio('lose');
+	loseAudio.play();
+	lives = lives - 1;
+	if(lives === 0){
+		level = 1;
+		lives = 5;
+	}
+	game.state.start(game.state.current);		
+}
+// play sound and goto next level
+function levelEnd(){
+	winAudio = game.add.audio('win');
+	winAudio.play();
+	lives++;
+	level++;
+	levels(level);
+	game.state.start(game.state.current);
+}
+// saves highscore with local storage
+function saveHighScore(){
+	if(store.enabled){
+		if(store.get('highScore')){
+			if(level > store.get('highScore') && level <= 100){
+				store.set('highScore', level);
+			}
+		}
+		else
+			store.set('highScore', level);
+	}
+}
+function randomNumber(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function pause(){
+	game.input.disabled = true;
+}
