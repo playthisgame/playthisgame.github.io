@@ -2,20 +2,20 @@ var game = new Phaser.Game(750, 600, Phaser.AUTO, 'canvas', { preload: preload, 
 lives = 5;
 function preload(){
 	// preload assets(images,sound)
-	game.load.image('player', '/assets/images/block.png');
-	game.load.image('turquoise', '/assets/images/t-block.png');
-	game.load.image('blue', '/assets/images/b-block.png');
-	game.load.image('emerald', '/assets/images/e-block.png');
-	game.load.image('purple', '/assets/images/p-block.png');
-	game.load.image('line', '/assets/images/line.png');
-	game.load.image('grey', '/assets/images/block2.png');
-	game.load.image('end', '/assets/images/end.png');
-	game.load.image('lava', '/assets/images/lava.png');
-	game.load.image('lazer', '/assets/images/lazer.png');
-	game.load.image('cloud', '/assets/images/cloud.png');
-	game.load.audio('jump', '/assets/sounds/jump.wav');
-	game.load.audio('lose', '/assets/sounds/lose.wav');
-	game.load.audio('win', '/assets/sounds/win.wav');
+	game.load.image('player', 'assets/images/block.png');
+	game.load.image('turquoise', 'assets/images/t-block.png');
+	game.load.image('blue', 'assets/images/b-block.png');
+	game.load.image('emerald', 'assets/images/e-block.png');
+	game.load.image('purple', 'assets/images/p-block.png');
+	game.load.image('line', 'assets/images/line.png');
+	game.load.image('grey', 'assets/images/block2.png');
+	game.load.image('end', 'assets/images/end.png');
+	game.load.image('lava', 'assets/images/lava.png');
+	game.load.image('lazer', 'assets/images/lazer.png');
+	game.load.image('cloud', 'assets/images/cloud.png');
+	game.load.audio('jump', 'assets/sounds/jump.wav');
+	game.load.audio('lose', 'assets/sounds/lose.wav');
+	game.load.audio('win', 'assets/sounds/win.wav');
 }
 
 function create() {
