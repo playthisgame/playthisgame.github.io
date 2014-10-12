@@ -68,6 +68,11 @@ function create() {
 	saveHighScore();
 	var highScore = store.get('highScore');
 	highScoreText = game.add.text(16, 80, 'Best ' + highScore, { font: '32px VT323', fill: '#ecf0f1' });
+	
+	    this.pauseButton = this.game.add.sprite(0, 0, 'pauseButton');
+    this.pauseButton.inputEnabled = true;
+    this.pauseButton.events.onInputUp.add(function () {this.game.paused = true;},this);
+    this.game.input.onDown.add(function () {if(this.game.paused)this.game.paused = false;},this);
 }
 function update() {
 	//handle collisions
