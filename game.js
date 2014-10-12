@@ -92,7 +92,7 @@ function collisionHandler(obj1, obj2) {
 	loseAudio.play();
 	lives = lives - 1;
 	if(lives === 0){
-		level = 1;
+		leveesl = 1;
 		lives = 5;
 	}
 	game.state.start(game.state.current);		
