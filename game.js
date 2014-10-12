@@ -77,8 +77,8 @@ function update() {
 	//player speed
 	player.body.velocity.x= 250;
 	// if space or mouse is clicked, jump
-	jump = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);	
-	if ((jump.isDown || game.input.pointer1.isDown || game.input.mouse.button==0) && player.body.touching.down){
+	space = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);	
+	if ((space.isDown || game.input.pointer1.isDown || game.input.mouse.button==0) && player.body.touching.down){
 		jumpAudio = game.add.audio('jump');
 		jumpAudio.play();
 		player.body.velocity.y = -250;
@@ -95,6 +95,7 @@ function collisionHandler(obj1, obj2) {
 		level = 1;
 		lives = 5;
 	}
+	this.game.paused = true;
 	game.state.start(game.state.current);		
 }
 // play sound and goto next level
