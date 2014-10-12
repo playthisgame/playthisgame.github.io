@@ -95,7 +95,6 @@ function collisionHandler(obj1, obj2) {
 		level = 1;
 		lives = 5;
 	}
-	this.game.paused = true;
 	game.state.start(game.state.current);		
 }
 // play sound and goto next level
