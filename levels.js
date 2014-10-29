@@ -1232,7 +1232,6 @@ function levels(level){
 		blocks = boxes.create(400, game.world.height - 150, 'grey');
 		blocks = boxes.create(425, game.world.height - 125, 'grey');
 		blocks = boxes.create(425, game.world.height - 150, 'grey');
-		blocks = boxes.create(425, game.world.height - 175, 'grey');
 	}
 	if(level > 150){
 		game.add.text(16, 80, "Game Over", { fill: '#FFFFFF', font: '64px VT323'});
