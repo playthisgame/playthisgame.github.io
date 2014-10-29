@@ -1220,7 +1220,14 @@ function levels(level){
 		blocks = boxes.create(650, game.world.height - 150, 'grey');
 		blocks = boxes.create(650, game.world.height - 125, 'grey');
 	}
-	if(level > 100){
+	if(level === 101){
+		blocks = boxes.create(400, game.world.height - 125, 'grey');
+		blocks = boxes.create(425, game.world.height - 125, 'blue');
+		blocks = boxes.create(450, game.world.height - 125, 'blue');
+		blocks = boxes.create(475, game.world.height - 125, 'blue');
+		blocks = boxes.create(500, game.world.height - 125, 'grey');
+	}
+	if(level > 150){
 		game.add.text(16, 80, "Game Over", { fill: '#FFFFFF', font: '64px VT323'});
 	}
 }
