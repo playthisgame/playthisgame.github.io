@@ -1221,18 +1221,18 @@ function levels(level){
 		blocks = boxes.create(650, game.world.height - 125, 'grey');
 	}
 	if(level === 101){
-		blocks = boxes.create(200, game.world.height - 125, 'grey');
-		blocks = boxes.create(200, game.world.height - 150, 'grey');
-		blocks = boxes.create(200, game.world.height - 175, 'grey');
-		blocks = boxes.create(225, game.world.height - 125, 'grey');
-		blocks = boxes.create(225, game.world.height - 150, 'grey');
-		blocks = boxes.create(250, game.world.height - 125, 'blue');
-		blocks = boxes.create(275, game.world.height - 125, 'blue');
 		blocks = boxes.create(300, game.world.height - 125, 'grey');
 		blocks = boxes.create(300, game.world.height - 150, 'grey');
+		blocks = boxes.create(300, game.world.height - 175, 'grey');
 		blocks = boxes.create(325, game.world.height - 125, 'grey');
 		blocks = boxes.create(325, game.world.height - 150, 'grey');
-		blocks = boxes.create(325, game.world.height - 175, 'grey');
+		blocks = boxes.create(350, game.world.height - 125, 'blue');
+		blocks = boxes.create(375, game.world.height - 125, 'blue');
+		blocks = boxes.create(400, game.world.height - 125, 'grey');
+		blocks = boxes.create(400, game.world.height - 150, 'grey');
+		blocks = boxes.create(425, game.world.height - 125, 'grey');
+		blocks = boxes.create(425, game.world.height - 150, 'grey');
+		blocks = boxes.create(425, game.world.height - 175, 'grey');
 	}
 	if(level > 150){
 		game.add.text(16, 80, "Game Over", { fill: '#FFFFFF', font: '64px VT323'});
